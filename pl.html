@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szymon Kochanowski | FQA Tester</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Outfit', 'sans-serif'] },
+                    colors: {
+                        background: '#050505',
+                        surface: '#111111',
+                        primary: '#00f0ff',
+                        secondary: '#7000ff',
+                        textMain: '#f3f4f6',
+                        textMuted: '#9ca3af'
+                    },
+                    animation: {
+                        'blob': 'blob 7s infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #050505; color: #f3f4f6; overflow-x: hidden; }
+        .glass-nav { background: rgba(5, 5, 5, 0.7); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .hero-gradient { background: linear-gradient(135deg, #00f0ff 0%, #7000ff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 10px 30px -10px rgba(0, 240, 255, 0.3); border-color: rgba(0, 240, 255, 0.5); }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #050505; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #00f0ff; }
+    </style>
+</head>
+<body class="antialiased selection:bg-primary selection:text-black">
+
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#hero" class="text-2xl font-bold tracking-tighter text-white hover:text-primary transition-colors">SK<span class="text-primary">.</span></a>
+            <div class="hidden md:flex gap-8 items-center font-medium text-sm">
+                <a href="#about" class="text-textMuted hover:text-white transition-colors">O mnie</a>
+                <a href="#experience" class="text-textMuted hover:text-white transition-colors">Doświadczenie</a>
+                <a href="#skills" class="text-textMuted hover:text-white transition-colors">Narzędzia</a>
+                <a href="index.html" class="px-4 py-2 rounded-full border border-primary/30 hover:border-primary text-primary hover:bg-primary/10 transition-all">🇬🇧 EN</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <div class="absolute top-1/4 left-1/4 w-72 h-72 bg-primary/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob"></div>
+        <div class="absolute top-1/3 right-1/4 w-72 h-72 bg-secondary/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob animation-delay-2000"></div>
+        
+        <div class="relative z-10 text-center px-6 max-w-4xl mx-auto" data-aos="fade-up" data-aos-duration="1000">
+            <div class="inline-block mb-4 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm text-sm font-medium text-primary">
+                Gotowy na nowe wyzwania
+            </div>
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6">
+                Cześć, jestem <span class="hero-gradient">Szymon</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-textMuted mb-10 max-w-2xl mx-auto">
+                Tester FQA (Functionality Quality Assurance) dbający o bezbłędną rozgrywkę i najwyższe standardy oprogramowania.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#experience" class="px-8 py-4 rounded-full bg-white text-black font-semibold hover:scale-105 transition-transform">Zobacz projekty</a>
+                <a href="https://github.com/" target="_blank" class="px-8 py-4 rounded-full border border-white/20 text-white font-semibold hover:bg-white/10 transition-colors">Profil GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 relative">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 flex items-center gap-4" data-aos="fade-right">
+                <span class="w-12 h-1 bg-primary rounded-full"></span>
+                O mnie
+            </h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 text-lg text-textMuted" data-aos="fade-up" data-aos-delay="100">
+                    <p>
+                        Mieszkam w Katowicach i z wykształcenia jestem technikiem informatykiem (absolwent Zespołu Szkół Elektrycznych w Białymstoku). Obecnie pogłębiam swoją wiedzę, studiując informatykę online na WSKZ w ramach Indywidualnej Organizacji Studiów.
+                    </p>
+                    <p>
+                        Moja pasja do gier wykracza poza samo granie. Niezależnie od tego, czy ogrywam duże tytuły RPG na moim nowym Nintendo Switch 2, czy analizuję mechaniki z perspektywy dewelopera i testera, podchodzę do nich z krytycznym okiem.
+                    </p>
+                    <p>
+                        Obecnie przygotowuję się i zbieram fundusze na zdobycie certyfikatu <span class="text-primary font-semibold">ISTQB Foundation Level</span>, aby jeszcze mocniej ugruntować moje kompetencje.
+                    </p>
+                </div>
+                <div class="relative" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="aspect-square rounded-2xl bg-surface border border-white/10 p-8 flex items-center justify-center relative overflow-hidden group">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="text-center z-10">
+                            <div class="text-6xl mb-4">🎮</div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Gracz.</h3>
+                            <h3 class="text-2xl font-bold text-white mb-2">Deweloper.</h3>
+                            <h3 class="text-2xl font-bold text-primary">Tester.</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-24 bg-surface/50 border-y border-white/5">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-16 flex items-center gap-4 justify-end" data-aos="fade-left">
+                Doświadczenie zawodowe
+                <span class="w-12 h-1 bg-primary rounded-full"></span>
+            </h2>
+            
+            <div class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-white/20 before:to-transparent">
+                
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active" data-aos="fade-up">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border border-primary bg-background shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow-[0_0_15px_rgba(0,240,255,0.4)] z-10">
+                        <div class="w-3 h-3 bg-primary rounded-full"></div>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] card-hover bg-surface border border-white/10 p-6 rounded-2xl transition-all duration-300">
+                        <div class="flex flex-col md:flex-row justify-between md:items-center mb-4 gap-2">
+                            <h3 class="font-bold text-xl text-white">FQA Tester</h3>
+                            <span class="text-sm text-primary font-medium bg-primary/10 px-3 py-1 rounded-full w-fit">Lipiec 2025 - Obecnie</span>
+                        </div>
+                        <h4 class="text-textMuted font-medium mb-4">Keywords Studios</h4>
+                        <ul class="text-textMuted/80 text-sm space-y-2 list-disc list-inside">
+                            <li>Testowanie funkcjonalne gier wideo na wielu platformach.</li>
+                            <li>Precyzyjna identyfikacja, reprodukcja i raportowanie defektów oprogramowania.</li>
+                            <li>Dbanie o jakość produktu zgodnie ze standardami branżowymi.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white/20 bg-background shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                        <div class="w-2 h-2 bg-white/50 rounded-full"></div>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] card-hover bg-surface border border-white/10 p-6 rounded-2xl transition-all duration-300">
+                        <h3 class="font-bold text-xl text-white mb-1">Doradca Klienta</h3>
+                        <h4 class="text-textMuted font-medium mb-4">T-Mobile</h4>
+                        <ul class="text-textMuted/80 text-sm space-y-2 list-disc list-inside">
+                            <li>Wsparcie techniczne i obsługa klienta.</li>
+                            <li>Rozwiązywanie problemów użytkowników i doradztwo techniczne.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white/20 bg-background shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                        <div class="w-2 h-2 bg-white/50 rounded-full"></div>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] card-hover bg-surface border border-white/10 p-6 rounded-2xl transition-all duration-300">
+                        <h3 class="font-bold text-xl text-white mb-1">Stażysta (Serwis komputerowy)</h3>
+                        <h4 class="text-textMuted font-medium mb-4">IT Service</h4>
+                        <ul class="text-textMuted/80 text-sm space-y-2 list-disc list-inside">
+                            <li>Diagnostyka sprzętu i wsparcie informatyczne.</li>
+                            <li>Konserwacja systemów i naprawy komputerów.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-24 relative">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-16 inline-flex flex-col items-center gap-2" data-aos="zoom-in">
+                Narzędzia i Umiejętności
+                <span class="w-12 h-1 bg-primary rounded-full"></span>
+            </h2>
+            
+            <div class="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+                <div class="group relative px-6 py-3 bg-surface border border-white/10 rounded-full overflow-hidden transition-all hover:border-primary hover:scale-105 cursor-default" data-aos="fade-up" data-aos-delay="50">
+                    <div class="absolute inset-0 bg-primary/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                    <span class="relative z-10 font-medium text-white group-hover:text-primary transition-colors">JIRA</span>
+                </div>
+                <div class="group relative px-6 py-3 bg-surface border border-white/10 rounded-full overflow-hidden transition-all hover:border-primary hover:scale-105 cursor-default" data-aos="fade-up" data-aos-delay="100">
+                    <div class="absolute inset-0 bg-primary/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                    <span class="relative z-10 font-medium text-white group-hover:text-primary transition-colors">TestMo</span>
+                </div>
+                <div class="group relative px-6 py-3 bg-surface border border-white/10 rounded-full overflow-hidden transition-all hover:border-primary hover:scale-105 cursor-default" data-aos="fade-up" data-aos-delay="150">
+                    <div class="absolute inset-0 bg-primary/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                    <span class="relative z-10 font-medium text-white group-hover:text-primary transition-colors">Zephyr</span>
+                </div>
+                <div class="group relative px-6 py-3 bg-surface border border-white/10 rounded-full overflow-hidden transition-all hover:border-primary hover:scale-105 cursor-default" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute inset-0 bg-primary/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                    <span class="relative z-10 font-medium text-white group-hover:text-primary transition-colors">Notion</span>
+                </div>
+                <div class="group relative px-6 py-3 bg-surface border border-white/10 rounded-full overflow-hidden transition-all hover:border-primary hover:scale-105 cursor-default" data-aos="fade-up" data-aos-delay="250">
+                    <div class="absolute inset-0 bg-primary/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                    <span class="relative z-10 font-medium text-white group-hover:text-primary transition-colors">Git</span>
+                </div>
+                <div class="group relative px-6 py-3 bg-surface border border-white/10 rounded-full overflow-hidden transition-all hover:border-secondary hover:scale-105 cursor-default" data-aos="fade-up" data-aos-delay="300">
+                    <div class="absolute inset-0 bg-secondary/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                    <span class="relative z-10 font-medium text-white group-hover:text-secondary transition-colors">Raportowanie Błędów</span>
+                </div>
+                <div class="group relative px-6 py-3 bg-surface border border-white/10 rounded-full overflow-hidden transition-all hover:border-secondary hover:scale-105 cursor-default" data-aos="fade-up" data-aos-delay="350">
+                    <div class="absolute inset-0 bg-secondary/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                    <span class="relative z-10 font-medium text-white group-hover:text-secondary transition-colors">Przypadki Testowe</span>
+                </div>
+                <div class="group relative px-6 py-3 bg-surface border border-white/10 rounded-full overflow-hidden transition-all hover:border-secondary hover:scale-105 cursor-default" data-aos="fade-up" data-aos-delay="400">
+                    <div class="absolute inset-0 bg-secondary/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                    <span class="relative z-10 font-medium text-white group-hover:text-secondary transition-colors">Diagnostyka Sprzętu</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="border-t border-white/10 bg-surface mt-12 py-12 text-center">
+        <p class="text-textMuted mb-4">Stworzone z myślą o Quality Assurance.</p>
+        <div class="flex justify-center gap-6">
+            <a href="https://github.com/" target="_blank" class="text-white hover:text-primary transition-colors font-bold text-xl">GitHub</a>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            offset: 50,
+            duration: 800,
+            easing: 'ease-out-cubic',
+        });
+    </script>
+</body>
+</html>
